@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        // Cyberpunk theme colors
+        cyber: {
+          bg: '#0F0F1A',
+          primary: '#FF2A6D',
+          secondary: '#05D9E8',
+          accent: '#D1F7FF',
+          highlight: '#7700FF',
+          muted: '#444444',
+          dark: '#131321',
+        }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +95,34 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'glow': {
+          '0%, 100%': {
+            textShadow: '0 0 5px #05D9E8, 0 0 15px #05D9E8, 0 0 20px #05D9E8'
+          },
+          '50%': {
+            textShadow: '0 0 10px #FF2A6D, 0 0 30px #FF2A6D, 0 0 40px #FF2A6D'
+          }
+        },
+        'float': {
+          '0%, 100%': {
+            transform: 'translateY(0)'
+          },
+          '50%': {
+            transform: 'translateY(-10px)'
+          }
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'glow': 'glow 3s ease-in-out infinite alternate',
+        'float': 'float 6s ease-in-out infinite'
+			},
+      fontFamily: {
+        cyber: ['Orbitron', 'sans-serif'],
+        story: ['Comfortaa', 'cursive']
+      }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
