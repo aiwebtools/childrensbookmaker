@@ -43,7 +43,7 @@ const HeroSection = () => {
               className="block w-full h-full cursor-pointer"
             >
               <img 
-                src="https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-5478-622f-8e5d-2014fa3631d2/raw?se=2025-04-30T01%3A03%3A30Z&sp=r&sv=2024-08-04&sr=b&scid=bf4a4086-c0da-5529-bcfc-71fd10a679fd&skoid=d958ec58-d47c-4d2f-a9f2-7f3e03fdcf72&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-29T22%3A35%3A54Z&ske=2025-04-30T22%3A35%3A54Z&sks=b&skv=2024-08-04&sig=ZHzPWCHigp%2BjSHqOEzvB5bbXW7drCUzeHqA28WB0cfk%3D" 
+                src="https://ideogram.ai/assets/image/lossless/response/drG-Kl_dRb6ZCXindiwTEA" 
                 alt="AI Generated Children's Book" 
                 className="object-contain w-full h-full max-h-[500px] bg-black brightness-125 contrast-110"
               />
