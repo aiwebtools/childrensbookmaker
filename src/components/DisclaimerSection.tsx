@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 
 const DisclaimerSection = () => {
   return (
@@ -8,6 +9,16 @@ const DisclaimerSection = () => {
         <h2 className="text-3xl md:text-4xl font-cyber font-bold text-center mb-8 neon-text">
           Legal Disclaimer
         </h2>
+        
+        <Alert className="max-w-4xl mx-auto glass-panel mb-6 border-cyber-secondary/30">
+          <AlertTitle className="text-cyber-primary">Usage Information</AlertTitle>
+          <AlertDescription>
+            <p className="text-white/80">
+              <span className="font-bold text-cyber-secondary">FREE ACCESS:</span> Unrestricted usage is free with a ChatGPT Plus account or higher.
+              Free accounts have limited interactions every few hours.
+            </p>
+          </AlertDescription>
+        </Alert>
         
         <div className="max-w-4xl mx-auto glass-panel p-8">
           <div className="space-y-6 text-gray-300">

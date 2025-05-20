@@ -49,12 +49,14 @@ const Footer = () => {
             <h3 className="text-lg font-cyber font-semibold mb-4 text-cyber-secondary">Contact</h3>
             <ul className="space-y-3">
               <li className="flex items-center">
-                <a href="tel:+14758008096" className="text-gray-400 hover:text-cyber-secondary transition-colors">
+                <a href="tel:+14758008096" 
+                   className="text-gray-400 hover:text-cyber-secondary transition-colors">
                   (475) 800-8096
                 </a>
               </li>
               <li className="flex items-center">
-                <a href="mailto:Contact@ai-webtools.com" className="text-gray-400 hover:text-cyber-secondary transition-colors">
+                <a href="mailto:Contact@ai-webtools.com" 
+                   className="text-gray-400 hover:text-cyber-secondary transition-colors">
                   Contact@ai-webtools.com
                 </a>
               </li>
@@ -81,7 +83,9 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.aiwebtools.ai" 
+               target="_blank" 
+               rel="noopener noreferrer">
               © 2025 AI WEB TOOLS LLC All rights reserved.
             </a>
           </p>
