@@ -70,7 +70,7 @@ const Footer = () => {
                   className="text-xs text-gray-400 hover:text-cyber-secondary transition-colors">
                   Privacy Policy
                 </a>
-                <a href="https://aiwebtools.ai/terms-of-services" 
+                <a href="https://aiwebtools.lovable.app/disclaimers" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-xs text-gray-400 hover:text-cyber-secondary transition-colors">
