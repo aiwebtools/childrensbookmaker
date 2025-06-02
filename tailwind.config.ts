@@ -63,7 +63,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-        // Cyberpunk theme colors
+        // Enhanced cyberpunk theme colors
         cyber: {
           bg: '#0F0F1A',
           primary: '#FF2A6D',
@@ -98,26 +98,47 @@ export default {
 				},
         'glow': {
           '0%, 100%': {
-            textShadow: '0 0 5px #05D9E8, 0 0 15px #05D9E8, 0 0 20px #05D9E8'
+            textShadow: '0 0 5px #05D9E8, 0 0 15px #05D9E8, 0 0 25px #05D9E8, 0 0 35px #05D9E8'
           },
           '50%': {
-            textShadow: '0 0 10px #FF2A6D, 0 0 30px #FF2A6D, 0 0 40px #FF2A6D'
+            textShadow: '0 0 10px #FF2A6D, 0 0 30px #FF2A6D, 0 0 40px #FF2A6D, 0 0 50px #FF2A6D'
           }
         },
         'float': {
           '0%, 100%': {
-            transform: 'translateY(0)'
+            transform: 'translateY(0) scale(1)'
           },
           '50%': {
-            transform: 'translateY(-10px)'
+            transform: 'translateY(-15px) scale(1.02)'
+          }
+        },
+        'divine-pulse': {
+          '0%, 100%': {
+            boxShadow: '0 0 20px rgba(5, 217, 232, 0.3), 0 0 40px rgba(255, 42, 109, 0.2)'
+          },
+          '50%': {
+            boxShadow: '0 0 40px rgba(5, 217, 232, 0.6), 0 0 80px rgba(255, 42, 109, 0.4)'
+          }
+        },
+        'cosmic-rotate': {
+          '0%': {
+            transform: 'rotate(0deg) scale(1)'
+          },
+          '50%': {
+            transform: 'rotate(180deg) scale(1.1)'
+          },
+          '100%': {
+            transform: 'rotate(360deg) scale(1)'
           }
         }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-        'glow': 'glow 3s ease-in-out infinite alternate',
-        'float': 'float 6s ease-in-out infinite'
+        'glow': 'glow 4s ease-in-out infinite alternate',
+        'float': 'float 8s ease-in-out infinite',
+        'divine-pulse': 'divine-pulse 3s ease-in-out infinite',
+        'cosmic-rotate': 'cosmic-rotate 20s linear infinite'
 			},
       fontFamily: {
         cyber: ['Orbitron', 'sans-serif'],
