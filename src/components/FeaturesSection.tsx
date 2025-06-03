@@ -30,18 +30,23 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="py-16 px-4 md:px-6 bg-cyber-dark/60" id="features">
+    <section className="py-16 px-4 md:px-6 bg-cyber-dark/60" id="features" role="region" aria-labelledby="features-heading">
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-cyber font-bold text-center mb-12 neon-text">
-          Features
-        </h2>
+        <header>
+          <h2 id="features-heading" className="text-3xl md:text-4xl font-cyber font-bold text-center mb-4 neon-text">
+            Free AI Picture Book Maker Features
+          </h2>
+          <p className="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
+            Discover why educators, parents, and storytellers choose our free AI tools for creating engaging children's content
+          </p>
+        </header>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="glass-panel p-6 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
-              <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-cyber-primary to-cyber-secondary"></div>
+            <article key={index} className="glass-panel p-6 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+              <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-cyber-primary to-cyber-secondary" aria-hidden="true"></div>
               <h3 className="text-xl font-cyber font-semibold mb-4 text-cyber-accent">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
-            </div>
+            </article>
           ))}
         </div>
       </div>

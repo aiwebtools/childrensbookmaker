@@ -36,32 +36,60 @@ const FAQSection = () => {
     {
       question: "Do I need artistic or writing skills to use this?",
       answer: "No special skills are required. The AI assists with both the writing and illustration process, making it accessible to anyone regardless of their creative background."
+    },
+    {
+      question: "Is this AI tool really free to use?",
+      answer: "Yes! The Children's Picture Book Maker GPT is completely free to use with a ChatGPT Plus account or higher. Free ChatGPT accounts have limited interactions every few hours, but Plus subscribers get unrestricted access to create unlimited picture books."
+    },
+    {
+      question: "Who can benefit from this AI picture book maker?",
+      answer: "This free AI tool is perfect for parents, teachers, educators, librarians, homeschooling families, children's authors, and anyone who wants to create engaging educational content for kids. It's also great for therapeutic storytelling and personalized gifts."
     }
   ];
 
+  // Schema markup for FAQ
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+
   return (
-    <section className="py-16 px-4 md:px-6" id="faq">
-      <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-cyber font-bold text-center mb-12 neon-text-pink">
-          Frequently Asked Questions
-        </h2>
-        
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="w-full">
-            {faqItems.map((item, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-800">
-                <AccordionTrigger className="text-left py-6 text-cyber-accent font-cyber">
-                  {item.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-gray-300 pb-6">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+    <>
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <section className="py-16 px-4 md:px-6" id="faq" role="region" aria-labelledby="faq-heading">
+        <div className="container mx-auto">
+          <h2 id="faq-heading" className="text-3xl md:text-4xl font-cyber font-bold text-center mb-12 neon-text-pink">
+            Frequently Asked Questions About Our Free AI Picture Book Maker
+          </h2>
+          
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="w-full">
+              {faqItems.map((item, index) => (
+                <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-800">
+                  <AccordionTrigger className="text-left py-6 text-cyber-accent font-cyber">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-300 pb-6">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
